@@ -1,0 +1,14 @@
+<form action="/upload" method="post" enctype="multipart/form-data">
+     <p class="card-text">Choose files to upload to AWS</p>
+        <input type="file" name="img" multiple>
+        <input type="submit" name="upload" value="Upload" class="btn btn-success">
+</form>
+{{msg}}
+<hr>
+<form action="/download" method="get" enctype="multipart/form-data">
+     <p class="card-text">Print the results by clicking the below button</p>
+     <input type="submit" name="download" value="Get Results" class="btn btn-success">
+</form>
+{% autoescape false %}
+{{data}}
+{% endautoescape %}
